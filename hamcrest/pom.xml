@@ -21,8 +21,8 @@
       See the License for the specific language governing permissions and
       limitations under the License.
     #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
-      Artifact    : org.smartdeveloperhub.testing:sdh-testing-aggregator:0.1.0-SNAPSHOT
-      Bundle      : sdh-testing-aggregator-0.1.0-SNAPSHOT.pom
+      Artifact    : org.smartdeveloperhub.testing:sdh-testing-hamcrest:0.1.0-SNAPSHOT
+      Bundle      : sdh-testing-hamcrest-0.1.0-SNAPSHOT.jar
     #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
 
 -->
@@ -37,31 +37,97 @@
 	<!-- =================================================================== -->
 
 	<parent>
-		<groupId>org.smartdeveloperhub</groupId>
-		<artifactId>sdh-build</artifactId>
-		<version>0.3.0-SNAPSHOT</version>
+		<groupId>org.smartdeveloperhub.testing</groupId>
+		<artifactId>sdh-testing-aggregator</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<groupId>org.smartdeveloperhub.testing</groupId>
-	<artifactId>sdh-testing-aggregator</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<artifactId>sdh-testing-hamcrest</artifactId>
 
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
 	<!-- =================================================================== -->
 	<!--   MODULE INFORMATION                                                -->
 	<!-- =================================================================== -->
 
-	<name>SDH :: Testing</name>
+	<name>SDH :: Testing :: Hamcrest</name>
 
-	<description>Testing utilities for the Java components of the Smart Developer Hub project </description>
+	<description>Collection of Hamcrest Matchers for the Smart Developer Hub project </description>
 
 	<!-- =================================================================== -->
 	<!--   BUILD SETTINGS                                                    -->
 	<!-- =================================================================== -->
 
-	<modules>
-		<module>hamcrest</module>
-	</modules>
+	<properties>
+		<ldp4j.version>0.3.0-SNAPSHOT</ldp4j.version>
+		<jena.version>2.13.0</jena.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.ldp4j.framework</groupId>
+				<artifactId>ldp4j-application-bom</artifactId>
+				<version>${ldp4j.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.ldp4j.commons</groupId>
+			<artifactId>ldp4j-commons-core</artifactId>
+			<version>${ldp4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-integration</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-arq</artifactId>
+			<version>${jena.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ldp4j.commons</groupId>
+			<artifactId>ldp4j-commons-testing</artifactId>
+			<version>${ldp4j.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jmockit</groupId>
+			<artifactId>jmockit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 </project>
