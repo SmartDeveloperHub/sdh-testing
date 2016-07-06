@@ -56,6 +56,24 @@
 
 	<description>Testing utilities for the Java components of the Smart Developer Hub project </description>
 
+	<url>http://www.smartdeveloperhub.org/</url>
+
+	<!-- The development team -->
+
+	<developers>
+		<developer>
+			<id>mestebangutierrez</id>
+			<name>Miguel Esteban Gutiérrez</name>
+			<email>m.esteban.gutierrez@gmail.com</email>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+				<role>product owner</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+
 	<!-- =================================================================== -->
 	<!--   BUILD SETTINGS                                                    -->
 	<!-- =================================================================== -->
@@ -63,5 +81,25 @@
 	<modules>
 		<module>hamcrest</module>
 	</modules>
+
+	<!-- =================================================================== -->
+	<!--   ENVIRONMENT SETTINGS                                              -->
+	<!-- =================================================================== -->
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/SmartDeveloperHub/sdh-testing/issues</url>
+	</issueManagement>
+
+	<ciManagement>
+		<system>Travis-CI</system>
+		<url>https://travis-ci.org/SmartDeveloperHub/sdh-testing</url>
+	</ciManagement>
+
+	<scm>
+		<connection>scm:git:git://git@github.com:SmartDeveloperHub/sdh-testing.git</connection>
+		<developerConnection>scm:git:ssh://github.com/SmartDeveloperHub/sdh-testing.git</developerConnection>
+		<url>git://github.com/SmartDeveloperHub/sdh-testing.git</url>
+	</scm>
 
 </project>
