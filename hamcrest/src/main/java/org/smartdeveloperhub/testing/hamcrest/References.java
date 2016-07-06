@@ -20,8 +20,8 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  * #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
- *   Artifact    : org.smartdeveloperhub.testing:sdh-testing-hamcrest:0.1.0-SNAPSHOT
- *   Bundle      : sdh-testing-hamcrest-0.1.0-SNAPSHOT.jar
+ *   Artifact    : org.smartdeveloperhub.testing:sdh-testing-hamcrest:0.2.0-SNAPSHOT
+ *   Bundle      : sdh-testing-hamcrest-0.2.0-SNAPSHOT.jar
  * #-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
  */
 package org.smartdeveloperhub.testing.hamcrest;
